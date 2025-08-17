@@ -7,9 +7,15 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+app.get("/", async (req, res) => {
+    res.send(`
+        <h1>Anasayfa</h1>
+    `)
+})
+
 app.get("/first", async (req, res) => {
     res.send(`
-        <h1>Main Routesss</h1>
+        <h1>Main Route</h1>
     `)
 })
 
