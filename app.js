@@ -11,12 +11,15 @@ app.get("/", async (req, res) => {
     res.send(`
         <h1>Anasayfa</h1>
         <a href="/products">Ürünlere git</a>
+        <a href="/message">Mesaj</a>
     `)
 })
 
-app.get("/first", async (req, res) => {
+app.get("/message", async (req, res) => {
     res.send(`
         <h1>Main Route</h1>
+        <a href="/">Anasayfa</a>
+        <h3 style="font-size: 45px;">${process.env.MESSAGE}</h3>
     `)
 })
 
